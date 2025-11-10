@@ -1,10 +1,15 @@
-theme: jekyll-theme-minimal
+title: Stratégia na Vybudovanie Majetku
+description: Objavte profesionálne stratégie pokru a blackjacku
+url: https://mibrutubru.github.io/Strategia-na-vybudovanie-majetku
+
+# Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
+theme: jekyll-theme-primer
+
+# Exclude SCSS files
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Exclude unnecessary files
 exclude:
@@ -15,3 +20,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - "*.jpeg"
+  - "*.jpg"
+  - "*.png"
