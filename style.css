@@ -448,6 +448,62 @@ strong {
     color: #ffd700;
 }
 
+/* GALLERY SECTION */
+.gallery-section {
+    margin: 3rem 0;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3);
+    border: 2px solid rgba(255, 215, 0, 0.8);
+}
+
+.gallery-item:hover img {
+    filter: brightness(1.1) contrast(1.1);
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
 /* LAST REFINEMENTS */
 ::-moz-selection {
     background-color: #ffd700;
